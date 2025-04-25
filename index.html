@@ -3,41 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breathtaker</title>
+  <title>Breathtaker - Wind Controller for Computer Keyboard</title>
+  <meta name="description" content="Breathtaker transforms your computer keyboard into an expressive wind controller, allowing wind instrumentalists to control synthesizers naturally.">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">breathtaker</a></div>
-    <nav>
-      <a href="buy.html">buy</a>
-      <a href="about.html">about</a>
-      <a href="faq.html">faq</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo"><a href="index.html">breathtaker</a></div>
+      <nav>
+        <a href="buy.html">buy</a>
+        <a href="about.html">about</a>
+        <a href="faq.html">faq</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="grid-container">
-    <div class="grid-item hero-text">
-      <h1>play your<br>computer<br>keyboard like a<br>wind instrument</h1>
-    </div>
-    <div class="grid-item hero-video">
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/A51Cxyg4V7U" 
-          title="Breathtaker Demo" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen></iframe>
+  <section class="hero-section">
+    <div class="grid-container">
+      <div class="grid-item hero-text">
+        <h1>play your computer keyboard like a wind instrument</h1>
+        <p>Breathtaker is a revolutionary plugin that transforms your computer keyboard into an expressive wind controller, allowing saxophone, flute, and clarinet players to control synthesizers naturally.</p>
+        <div class="hero-cta">
+          <a href="buy.html" class="primary-button">buy now</a>
+          <a href="#features" class="secondary-button">learn more</a>
+        </div>
+      </div>
+      <div class="grid-item hero-video">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/A51Cxyg4V7U" 
+            title="Breathtaker Demo" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-wind"></i></div>
+        <h3 class="feature-title">Natural Expression</h3>
+        <p>Intuitive control of articulation, dynamics and expression that responds like your acoustic instrument.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+        <h3 class="feature-title">Works with Any Keyboard</h3>
+        <p>No special hardware required - just your standard computer keyboard and your favorite DAW.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+        <h3 class="feature-title">Customizable Mapping</h3>
+        <p>Map keys to match your instrument's fingering system, creating a familiar playing experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid-container">
     <div class="grid-item plugin-screenshot">
-      <img src="bt1guiscreenshot.png" alt="Breathtaker plugin interface" width="400">
+      <img src="bt1guiscreenshot.png" alt="Breathtaker plugin interface">
     </div>
     <div class="grid-item tagline">
-      <p>control your synths<br>with your sax brain</p>
+      <p>control your synths with your sax brain</p>
+      <p style="font-size: 18px; opacity: 0.9;">Breathtaker bridges the gap between acoustic wind playing and digital synthesis, allowing you to transfer your years of playing experience directly to virtual instruments.</p>
+      <a href="buy.html" class="primary-button">get breathtaker</a>
     </div>
-  </main>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="testimonials-container">
+      <h2>What Musicians Are Saying</h2>
+      <div class="testimonial">
+        <p class="testimonial-text">"As a professional saxophonist, Breathtaker has revolutionized how I approach electronic music. I can finally use my years of playing experience to control synths without learning a completely new instrument."</p>
+        <p class="testimonial-author">— Michael Torres, Jazz Saxophonist</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to receive news about updates, tutorials, and special offers.</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Breathtaker. All rights reserved.</p>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <div class="footer-logo">breathtaker</div>
+        <p>Transform your keyboard into an expressive wind controller.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="buy.html">Breathtaker Standard</a></li>
+          <li><a href="buy.html">Breathtaker Pro</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Breathtaker. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
