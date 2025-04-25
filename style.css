@@ -1,0 +1,358 @@
+/* Reset default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and global styles */
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+    color: #728BA3;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #728BA3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo a:hover {
+    text-decoration: none;
+  }
+  
+  nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    color: #728BA3;
+    font-weight: 400;
+  }
+  
+  .plugin-screenshot img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Video container for responsive, full-sized YouTube embed */
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  /* Plugin interface placeholder */
+  .plugin-interface-placeholder {
+    background-color: #728BA3;
+    color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plugin-interface-placeholder h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .placeholder-controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+  
+  .checkbox {
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .checkbox:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+  
+  .placeholder-message {
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .tagline {
+    text-align: center;
+  }
+  
+  .tagline p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #728BA3;
+    font-weight: 400;
+  }
+  
+  /* Page content styles */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-content h1 {
+  color: #728BA3;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Buy page styles */
+.product-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.product-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border: 2px solid #728BA3;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+}
+
+.product-card.featured {
+  border-width: 4px;
+  transform: scale(1.05);
+}
+
+.product-card h2 {
+  color: #728BA3;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #728BA3;
+  margin-bottom: 20px;
+}
+
+.product-card ul {
+  text-align: left;
+  margin: 20px 0;
+  list-style-position: inside;
+}
+
+.product-card li {
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  background-color: #728BA3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #5d738a;
+}
+
+.requirements {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #728BA3;
+  padding-top: 30px;
+}
+
+.requirements h3 {
+  color: #728BA3;
+  margin-bottom: 15px;
+}
+
+/* About page styles */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h2 {
+  color: #728BA3;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.team-section h2 {
+  color: #728BA3;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.team-member h3 {
+  color: #728BA3;
+  margin-bottom: 5px;
+}
+
+.role {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* FAQ page styles */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.faq-item h2 {
+  color: #728BA3;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.faq-item p {
+  line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  color: #728BA3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .plugin-screenshot img,
+  .plugin-interface-placeholder {
+    max-width: 100%;
+  }
+  
+  .video-container {
+    width: 100%;
+  }
+  
+  .product-card.featured {
+    transform: none;
+  }
+  
+  .team-member {
+    flex: 1 1 100%;
+  }
+}
