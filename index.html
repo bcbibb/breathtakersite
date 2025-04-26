@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breathtaker - Wind Controller for Computer Keyboard</title>
-  <meta name="description" content="Breathtaker transforms your computer keyboard into an expressive wind controller, allowing wind instrumentalists to control synthesizers naturally.">
+  <title>breathtaker1 - Wind Controller for Computer Keyboard</title>
+  <meta name="description" content="breathtaker1 transforms your computer keyboard into an expressive wind controller, allowing wind instrumentalists to control synthesizers naturally.">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -22,19 +23,21 @@
   </header>
 
   <section class="hero-section">
-    <div class="grid-container">
+    <div class="grid-container hero-grid">
       <div class="grid-item hero-text">
+        <div class="introducing">Introducing</div>
+        <div class="product-logo">breathtaker<span>1</span></div>
         <h1>play your computer keyboard like a wind instrument</h1>
-        <p>Breathtaker is a revolutionary plugin that transforms your computer keyboard into an expressive wind controller, allowing saxophone, flute, and clarinet players to control synthesizers naturally.</p>
+        <p>breathtaker1 is a specialized plugin that maps your computer keyboard to saxophone fingerings, allowing wind players to control MIDI synthesizers with familiar techniques.</p>
         <div class="hero-cta">
-          <a href="buy.html" class="primary-button">buy now</a>
+          <a href="buy.html" class="primary-button">try for free</a>
           <a href="#features" class="secondary-button">learn more</a>
         </div>
       </div>
       <div class="grid-item hero-video">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/A51Cxyg4V7U" 
-            title="Breathtaker Demo" frameborder="0" 
+            title="breathtaker Demo" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
         </div>
@@ -47,39 +50,104 @@
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-wind"></i></div>
-        <h3 class="feature-title">Natural Expression</h3>
-        <p>Intuitive control of articulation, dynamics and expression that responds like your acoustic instrument.</p>
+        <h3 class="feature-title">Saxophone-Style Fingerings</h3>
+        <p>Intuitive keyboard mappings that respond to familiar fingering patterns used on saxophones and other wind instruments.</p>
+        <div class="tech-specs">
+          <span class="spec-tag">Multi-Key Combos</span>
+          <span class="spec-tag">Intelligent Detection</span>
+        </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-laptop"></i></div>
-        <h3 class="feature-title">Works with Any Keyboard</h3>
-        <p>No special hardware required - just your standard computer keyboard and your favorite DAW.</p>
+        <h3 class="feature-title">Adjustable Latency</h3>
+        <p>Fine-tune response time between 20-100ms to match your playing style and ensure accurate note detection.</p>
+        <div class="tech-specs">
+          <span class="spec-tag">20-100ms Range</span>
+          <span class="spec-tag">Low CPU Usage</span>
+        </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
-        <h3 class="feature-title">Customizable Mapping</h3>
-        <p>Map keys to match your instrument's fingering system, creating a familiar playing experience.</p>
+        <h3 class="feature-title">Transposition Options</h3>
+        <p>Built-in transposition for Eb saxophones and Bb tenor instruments, allowing you to play in your instrument's native key.</p>
+        <div class="tech-specs">
+          <span class="spec-tag">Eb Alto</span>
+          <span class="spec-tag">Bb Tenor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="specs-section">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p class="section-subtitle">breathtaker1 is designed for maximum usability with minimal system impact, allowing you to focus on your music without worrying about technical limitations.</p>
+      <div class="specs-row">
+        <div class="spec-item">
+          <div class="spec-number">30ms</div>
+          <div class="spec-label">Default Latency</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-number">0%</div>
+          <div class="spec-label">CPU Impact</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-number">v1.0</div>
+          <div class="spec-label">Current Version</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-number">∞</div>
+          <div class="spec-label">Possibilities</div>
+        </div>
+      </div>
+      <div class="format-badges">
+        <div class="format-badge"><i class="fas fa-plug"></i> VST3</div>
+        <div class="format-badge"><i class="fab fa-apple"></i> AU</div>
+        <div class="format-badge"><i class="fas fa-desktop"></i> Standalone</div>
+      </div>
+      
+      <div class="sys-requirements">
+        <h3>System Requirements</h3>
+        <div class="requirements-grid">
+          <div class="requirement-item">
+            <i class="fab fa-apple"></i>
+            <p><strong>macOS:</strong> 10.13 or later</p>
+          </div>
+          <div class="requirement-item">
+            <i class="fas fa-microchip"></i>
+            <p><strong>Processor:</strong> Intel or Apple Silicon</p>
+          </div>
+          <div class="requirement-item">
+            <i class="fas fa-memory"></i>
+            <p><strong>RAM:</strong> 4GB minimum</p>
+          </div>
+          <div class="requirement-item">
+            <i class="fas fa-hdd"></i>
+            <p><strong>Disk:</strong> 50MB free space</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="grid-container">
     <div class="grid-item plugin-screenshot">
-      <img src="bt1guiscreenshot.png" alt="Breathtaker plugin interface">
+      <img src="bt1guiscreenshot.png" alt="breathtaker plugin interface">
     </div>
     <div class="grid-item tagline">
       <p>control your synths with your sax brain</p>
-      <p style="font-size: 18px; opacity: 0.9;">Breathtaker bridges the gap between acoustic wind playing and digital synthesis, allowing you to transfer your years of playing experience directly to virtual instruments.</p>
-      <a href="buy.html" class="primary-button">get breathtaker</a>
+      <p style="font-size: 18px; opacity: 0.9;">breathtaker1 bridges the gap between acoustic wind playing and MIDI, letting you use your existing fingering muscle memory instead of relearning everything on a keyboard controller.</p>
+      <a href="buy.html" class="primary-button">try for free</a>
+      <span class="promo-badge">50% OFF Launch Special</span>
     </div>
   </section>
 
   <section class="testimonials-section">
     <div class="testimonials-container">
-      <h2>What Musicians Are Saying</h2>
+      <h2>Early User Feedback</h2>
       <div class="testimonial">
-        <p class="testimonial-text">"As a professional saxophonist, Breathtaker has revolutionized how I approach electronic music. I can finally use my years of playing experience to control synths without learning a completely new instrument."</p>
-        <p class="testimonial-author">— Michael Torres, Jazz Saxophonist</p>
+        <p class="testimonial-text">"I've always struggled with playing synths using a keyboard. breathtaker1 lets me apply my saxophone technique directly to virtual instruments. The note hold feature is particularly useful for sustained passages."</p>
+        <p class="testimonial-author">— Beta Test User</p>
       </div>
     </div>
   </section>
@@ -98,7 +166,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-nav">
-        <div class="footer-logo">breathtaker</div>
+        <div class="footer-logo">breathtaker1</div>
         <p>Transform your keyboard into an expressive wind controller.</p>
         <div class="social-links">
           <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -107,10 +175,10 @@
         </div>
       </div>
       <div class="footer-nav">
-        <h3>Products</h3>
+        <h3>Product</h3>
         <ul>
-          <li><a href="buy.html">Breathtaker Standard</a></li>
-          <li><a href="buy.html">Breathtaker Pro</a></li>
+          <li><a href="buy.html">breathtaker1</a></li>
+          <li><a href="buy.html">Free Trial</a></li>
         </ul>
       </div>
       <div class="footer-nav">
@@ -129,7 +197,7 @@
         </ul>
       </div>
       <div class="copyright">
-        <p>© 2025 Breathtaker. All rights reserved.</p>
+        <p>© 2025 breathtaker. All rights reserved.</p>
       </div>
     </div>
   </footer>
