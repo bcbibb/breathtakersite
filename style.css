@@ -1,3 +1,9 @@
+/* Define CSS variables */
+:root {
+  --theme-color: #728BA3;
+  --scroll: 0;
+}
+
 /* Reset default margins */
 * {
   margin: 0;
@@ -12,9 +18,11 @@ body {
   color: #ffffff;
   line-height: 1.6;
   position: relative;
+  /* This ensures the body background extends fully */
+  min-height: 100vh;
 }
 
-/* Add noise texture overlay to entire site */
+/* Add noise texture overlay to entire site with parallax effect */
 body::before {
   content: '';
   position: fixed;
@@ -28,6 +36,27 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-attachment: fixed;
+  transform: translate3d(0, calc(var(--scroll) * -20%), 0) scale(1.1);
+  will-change: transform;
+  animation: subtle-noise-shift 120s linear infinite;
+}
+
+@keyframes subtle-noise-shift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    filter: hue-rotate(1deg);
+  }
+  50% {
+    filter: hue-rotate(2deg);
+  }
+  75% {
+    filter: hue-rotate(1deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }
 
 /* Base typography */
@@ -378,7 +407,7 @@ nav a:hover::after {
 
 /* Features section */
 .features-section {
-  padding: 120px 0;
+  padding: 120px 0 160px;
   position: relative;
   overflow: hidden;
 }
@@ -582,7 +611,7 @@ nav a:hover::after {
 
 /* Testimonials section */
 .testimonials-section {
-  padding: 100px 0;
+  padding: 100px 0 180px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -719,12 +748,13 @@ nav a:hover::after {
 
 /* Newsletter section */
 .newsletter-section {
-  padding: 120px 0;
+  padding: 100px 0 100px;
   text-align: center;
   color: #333333;
   position: relative;
   overflow: hidden;
   background-color: #ffffff;
+  border-top: 1px solid rgba(114, 139, 163, 0.1);
 }
 
 /* Subtle grid overlay for newsletter section */
@@ -2016,9 +2046,10 @@ nav a:hover::after {
 /* Footer styles */
 footer {
   color: #ffffff;
-  padding: 80px 0 30px;
+  padding: 30px 0 20px;
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: -20px;
 }
 
 .footer-container {
@@ -2027,18 +2058,18 @@ footer {
   padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+  gap: 20px;
 }
 
 .footer-logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-nav h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
@@ -2047,7 +2078,7 @@ footer {
 }
 
 .footer-nav li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-nav a {
@@ -2088,8 +2119,8 @@ footer {
 
 .copyright {
   grid-column: 1 / -1;
-  margin-top: 40px;
-  padding-top: 20px;
+  margin-top: 20px;
+  padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   font-size: 14px;
