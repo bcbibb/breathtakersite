@@ -10,7 +10,7 @@
   font-size: 42px;
   text-align: center;
   margin-bottom: 60px;
-  color: #333;
+  color: #000000;
   position: relative;
 }
 
@@ -22,7 +22,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background-color: #728BA3;
+  background-color: #000000;
 }
 
 .support-grid {
@@ -39,7 +39,7 @@
 .support-section h2 {
   font-size: 24px;
   font-weight: 500;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px;
   text-transform: lowercase;
   position: relative;
@@ -53,7 +53,7 @@
   left: 0;
   width: 40px;
   height: 3px;
-  background-color: rgba(114, 139, 163, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .support-links {
@@ -65,7 +65,7 @@
 }
 
 .support-links a {
-  color: #728BA3;
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
   font-size: 16px;
   transition: all 0.2s ease;
@@ -81,12 +81,12 @@
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #728BA3;
+  background-color: #000000;
   transition: width 0.2s ease;
 }
 
 .support-links a:hover {
-  color: #5a7088;
+  color: #000000;
 }
 
 .support-links a:hover::after {
@@ -98,22 +98,24 @@
   max-width: 900px;
   margin: 0 auto 80px;
   padding: 40px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .support-content h2 {
   font-size: 28px;
-  color: #333;
+  color: #000000;
   margin-bottom: 25px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #f2f2f2;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .support-content h3 {
   font-size: 20px;
-  color: #728BA3;
+  color: #000000;
   margin: 30px 0 15px;
   font-weight: 500;
 }
@@ -121,13 +123,14 @@
 .support-content p {
   margin-bottom: 20px;
   line-height: 1.6;
-  color: #444;
+  color: #000000;
 }
 
 .support-content ul, 
 .support-content ol {
   padding-left: 25px;
   margin-bottom: 25px;
+  color: #000000;
 }
 
 .support-content li {
@@ -136,7 +139,7 @@
 }
 
 .support-content strong {
-  color: #333;
+  color: #000000;
   font-weight: 600;
 }
 
@@ -147,19 +150,20 @@
 
 .fingering-row {
   margin-bottom: 30px;
-  background-color: #f8f9fa;
+  background-color: rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .fingering-row h3 {
   font-size: 20px;
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
   font-weight: 500;
   padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .note-boxes {
@@ -169,11 +173,12 @@
 }
 
 .note-box {
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   padding: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
   width: calc(16.666% - 13px);
   min-width: 110px;
   display: flex;
@@ -184,19 +189,21 @@
 
 .note-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .note-name {
   font-weight: 600;
-  color: #333;
+  color: #000000;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
 .note-fingering {
   font-family: monospace;
-  color: #555;
+  color: #000000;
   font-size: 15px;
   text-align: center;
 }
@@ -204,7 +211,7 @@
 .alternative-fingerings {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .alternative-fingerings p {
@@ -214,7 +221,7 @@
 
 .alternative-fingerings .note-fingering {
   display: inline-block;
-  background-color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 4px 8px;
   border-radius: 4px;
   margin-left: 8px;
@@ -240,31 +247,33 @@
 
 .contact-support {
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.08);
   padding: 60px 40px;
   border-radius: 8px;
   margin-top: 40px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 .contact-support h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
 }
 
 .contact-support p {
   max-width: 600px;
   margin: 0 auto 30px;
-  color: #555;
+  color: #000000;
   font-size: 17px;
   line-height: 1.5;
 }
 
 .support-button {
   display: inline-block;
-  background-color: #728BA3;
-  color: white;
+  background-color: #ffffff;
+  color: #5a7088;
   padding: 12px 30px;
   border-radius: 4px;
   font-family: 'Orbitron', sans-serif;
@@ -277,15 +286,16 @@
 }
 
 .support-button:hover {
-  background-color: #5a7088;
+  background-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #5a7088;
+  opacity: 0.9;
 }
 
 /* Add styles for active nav link */
 header nav a.active {
-  color: #728BA3;
+  color: #000000;
   font-weight: 500;
 }
 
@@ -296,7 +306,7 @@ header nav a.active::after {
 /* Cache busting version tag */
 .support-css-version {
   display: none;
-  content: "v1.1";
+  content: "v1.3";
 }
 
 /* Responsive adjustments */
