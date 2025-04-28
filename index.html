@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>breathtaker1 - Wind Controller for Computer Keyboard</title>
   <meta name="description" content="breathtaker1 transforms your computer keyboard into an expressive wind controller, allowing wind instrumentalists to control synthesizers naturally.">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=1.1" />
+  <script src="script.js?v=1.1" defer></script>
 </head>
 <body>
   <header>
@@ -18,6 +18,7 @@
         <a href="buy.html">buy</a>
         <a href="about.html">about</a>
         <a href="faq.html">faq</a>
+        <a href="support.html">support</a>
       </nav>
     </div>
   </header>
@@ -44,35 +45,95 @@
       </div>
     </div>
   </section>
+  
+  <section class="grid-container" style="padding-top: 60px; padding-bottom: 80px;">
+    <div class="grid-item plugin-screenshot">
+      <img src="bt1guiscreenshot.png" alt="breathtaker plugin interface">
+    </div>
+    <div class="grid-item tagline">
+      <h2 class="main-tagline">control your synths with your sax brain</h2>
+      <div class="technology-explanation">
+        <p>The breathtaker1 turns your computer keyboard into a playable MIDI controller using saxophone fingerings. No breath required — notes are triggered by keyboard presses. The transition from saxophone to bt1 is seamless, allowing wind players to immediately apply their existing skills.</p>
+        <p>It's also an interesting way for non-saxophonists to explore a monophonic instrument. The saxophone fingering system is logical, with note fingerings evenly split: half controlled by the left hand, half by the right hand.</p>
+        <p>Half the battle of playing saxophone is tone production, but when we strip that away and focus only on fingerings, how much easier will it be?</p>
+      </div>
+      <div class="cta-container">
+        <a href="buy.html" class="primary-button">try for free</a>
+        <span class="promo-tag-refined">50% OFF Launch Special</span>
+      </div>
+    </div>
+  </section>
 
   <section id="features" class="features-section">
-    <h2 class="section-title">Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-wind"></i></div>
-        <h3 class="feature-title">Saxophone-Style Fingerings</h3>
-        <p>Intuitive keyboard mappings that respond to familiar fingering patterns used on saxophones and other wind instruments.</p>
-        <div class="tech-specs">
-          <span class="spec-tag">Multi-Key Combos</span>
-          <span class="spec-tag">Intelligent Detection</span>
-        </div>
+    <h2 class="section-title">How It Works</h2>
+    
+    <div class="how-it-works-container">
+      <!-- Keyboard Diagram -->
+      <div class="keyboard-diagram">
+        <h3>Saxophone Fingerings on Your Keyboard</h3>
+        <img src="keyboard-pic.jpg" alt="Keyboard with saxophone fingerings mapped" class="feature-image">
+        <p class="diagram-caption">Your QWERTY keyboard becomes a saxophone with familiar fingerings</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-laptop"></i></div>
-        <h3 class="feature-title">Adjustable Latency</h3>
-        <p>Fine-tune response time between 20-100ms to match your playing style and ensure accurate note detection.</p>
-        <div class="tech-specs">
-          <span class="spec-tag">20-100ms Range</span>
-          <span class="spec-tag">Low CPU Usage</span>
-        </div>
+      
+      <!-- Key Benefits List -->
+      <div class="key-benefits">
+        <h3>Why Breathtaker?</h3>
+        <ul class="benefits-list">
+          <li>
+            <strong>Use Your Sax Brain</strong>
+            <span>Play with the same muscle memory you already have</span>
+          </li>
+          <li>
+            <strong>No Special Hardware</strong>
+            <span>Just your computer keyboard - no expensive MIDI controllers</span>
+          </li>
+          <li>
+            <strong>Instant Playability</strong>
+            <span>Zero learning curve for saxophonists</span>
+          </li>
+          <li>
+            <strong>Low Latency</strong>
+            <span>Responsive performance with customizable timing</span>
+          </li>
+          <li>
+            <strong>Play in Your Key</strong>
+            <span>Built-in transposition for Eb Alto and Bb Tenor</span>
+          </li>
+        </ul>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
-        <h3 class="feature-title">Transposition Options</h3>
-        <p>Built-in transposition for Eb saxophones and Bb tenor instruments, allowing you to play in your instrument's native key.</p>
-        <div class="tech-specs">
-          <span class="spec-tag">Eb Alto</span>
-          <span class="spec-tag">Bb Tenor</span>
+    </div>
+  </section>
+  
+  <section class="compatibility-section">
+    <div class="container">
+      <h2 class="section-title">Compatible With</h2>
+      
+      <div class="format-badges">
+        <div class="format-badge"><i class="fas fa-plug"></i> VST3</div>
+        <div class="format-badge"><i class="fab fa-apple"></i> AU</div>
+        <div class="format-badge"><i class="fas fa-desktop"></i> Standalone</div>
+      </div>
+      
+      <div class="comparison-container">
+        <div class="comparison-column">
+          <h3>breathtaker1</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-check"></i> No special hardware required</li>
+            <li><i class="fas fa-check"></i> Works with standard keyboard</li>
+            <li><i class="fas fa-check"></i> Natural saxophone fingerings</li>
+            <li><i class="fas fa-check"></i> Zero learning curve for saxophonists</li>
+            <li><i class="fas fa-check"></i> 30ms default latency</li>
+          </ul>
+        </div>
+        <div class="comparison-column">
+          <h3>Traditional Controllers</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-times"></i> Additional hardware purchase</li>
+            <li><i class="fas fa-times"></i> Piano-centric layout</li>
+            <li><i class="fas fa-times"></i> Unfamiliar fingering patterns</li>
+            <li><i class="fas fa-times"></i> Steep learning curve</li>
+            <li><i class="fas fa-times"></i> No wind instrument feel</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -80,8 +141,8 @@
   
   <section class="specs-section">
     <div class="container">
-      <h2 class="section-title">Technical Specifications</h2>
-      <p class="section-subtitle">breathtaker1 is designed for maximum usability with minimal system impact, allowing you to focus on your music without worrying about technical limitations.</p>
+      <h2 class="section-title">Specifications</h2>
+      
       <div class="specs-row">
         <div class="spec-item">
           <div class="spec-number">30ms</div>
@@ -99,11 +160,6 @@
           <div class="spec-number">∞</div>
           <div class="spec-label">Possibilities</div>
         </div>
-      </div>
-      <div class="format-badges">
-        <div class="format-badge"><i class="fas fa-plug"></i> VST3</div>
-        <div class="format-badge"><i class="fab fa-apple"></i> AU</div>
-        <div class="format-badge"><i class="fas fa-desktop"></i> Standalone</div>
       </div>
       
       <div class="sys-requirements">
@@ -130,25 +186,30 @@
     </div>
   </section>
 
-  <section class="grid-container">
-    <div class="grid-item plugin-screenshot">
-      <img src="bt1guiscreenshot.png" alt="breathtaker plugin interface">
-    </div>
-    <div class="grid-item tagline">
-      <p>control your synths with your sax brain</p>
-      <p style="font-size: 18px; opacity: 0.9;">breathtaker1 bridges the gap between acoustic wind playing and MIDI, letting you use your existing fingering muscle memory instead of relearning everything on a keyboard controller.</p>
-      <a href="buy.html" class="primary-button">try for free</a>
-      <span class="promo-badge">50% OFF Launch Special</span>
-    </div>
-  </section>
-
   <section class="testimonials-section">
     <div class="testimonials-container">
-      <h2>Early User Feedback</h2>
-      <div class="testimonial">
-        <p class="testimonial-text">"I've always struggled with playing synths using a keyboard. breathtaker1 lets me apply my saxophone technique directly to virtual instruments. The note hold feature is particularly useful for sustained passages."</p>
-        <p class="testimonial-author">— Beta Test User</p>
+      <h2>User Testimonials</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"I've always struggled with playing synths using a keyboard. breathtaker1 lets me apply my saxophone technique directly to virtual instruments. The note hold feature is particularly useful for sustained passages."</p>
+          </div>
+          <div class="testimonial-footer">
+            <p class="testimonial-author">—Alex T.</p>
+            <p class="testimonial-role">Jazz Saxophonist & Producer</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"After years of struggling with traditional MIDI controllers, it's refreshing to have an interface that works with my saxophone brain. The learning curve was practically non-existent."</p>
+          </div>
+          <div class="testimonial-footer">
+            <p class="testimonial-author">—Sam J.</p>
+            <p class="testimonial-role">Film Composer</p>
+          </div>
+        </div>
       </div>
+      <p class="add-testimonial">Are you using breathtaker1? <a href="#">Share your experience</a></p>
     </div>
   </section>
 
@@ -184,6 +245,7 @@
       <div class="footer-nav">
         <h3>Support</h3>
         <ul>
+          <li><a href="support.html">Help Center</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="#">Documentation</a></li>
           <li><a href="#">Contact Us</a></li>

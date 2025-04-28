@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - breathtaker</title>
+  <meta name="description" content="Get help and support for your breathtaker wind controller software.">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=1.1" />
+  <link rel="stylesheet" href="support.css?v=1.1" />
+  <script src="script.js?v=1.1" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo"><a href="index.html">breathtaker</a></div>
+      <nav>
+        <a href="buy.html">buy</a>
+        <a href="about.html">about</a>
+        <a href="faq.html">faq</a>
+        <a href="support.html" class="active">support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="support-page">
+    <h1>Support</h1>
+    
+    <div class="support-grid">
+      <section class="support-section">
+        <h2>installation</h2>
+        <ul class="support-links">
+          <li><a href="#installation">Installation Instructions</a></li>
+        </ul>
+      </section>
+
+      <section class="support-section">
+        <h2>using breathtaker1</h2>
+        <ul class="support-links">
+          <li><a href="#playing">Interface & Controls</a></li>
+          <li><a href="#special-keys">Special Key Commands</a></li>
+          <li><a href="#hand-setup">Hand Position & Setup</a></li>
+        </ul>
+      </section>
+
+      <section class="support-section">
+        <h2>advanced techniques</h2>
+        <ul class="support-links">
+          <li><a href="#legato">Legato Playing</a></li>
+          <li><a href="#pivoting">Pivoting</a></li>
+        </ul>
+      </section>
+
+      <section class="support-section">
+        <h2>technical</h2>
+        <ul class="support-links">
+          <li><a href="#keyboard-limitations">Keyboard Limitations</a></li>
+          <li><a href="#key-mappings">Fingering Charts</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div id="installation" class="support-content">
+      <h2>Installation Instructions</h2>
+      
+      <h3>Enable IAC Driver in Audio MIDI Setup</h3>
+      <ol>
+        <li>In spotlight, search Audio MIDI Setup</li>
+        <li>Once it's open, in the top bar of your computer, select Window>Show MIDI Studio</li>
+        <li>In MIDI Studio, select double click IAC driver, and then make sure the "Device is online" box is ticked.</li>
+        <li>If there are no active ports, add "Bus 1" as a port, and make sure the connectors for it are MIDI in "1" and MIDI out "1".</li>
+        <li>If you have any other virtual midi devices other than the IAC driver, it's possible you may have to disable it. The bt1 may try to use that as an input instead. Not sure yet. It will, however, prioritize the IAC driver over other non-virtual midi devices, so you'll probably be good.</li>
+      </ol>
+
+      <h3>Launch and configure your DAW of choice</h3>
+      <ol>
+        <li>At this point, breathtaker1 will be automatically ready to send MIDI through the IAC driver.</li>
+        <li>In Ableton, a MIDI track will automatically accept the IAC driver through default "All channels" input setting, but you can be more specific if you'd like and select "IAC Driver".</li>
+        <li>Make sure a MIDI instrument track with a loaded instrument has been added, and hit the red record-enable button.</li>
+      </ol>
+
+      <h3>Launch breathtaker1</h3>
+      <p>Launch the program, and boom! As soon as you hit some key combos, you should hear sound triggered from your synth.</p>
+
+      <h3>Keyboard focus</h3>
+      <p>bt1 can only hijack your keyboard (otherwise known as getting your keyboard focus) if it is in the foreground of your computer. If you click out of it into your DAW, you'll have to click back into the bt1 to get it to work again.</p>
+    </div>
+
+
+    <div id="playing" class="support-content">
+      <h2>Playing The breathtaker1</h2>
+      
+      <h3>Display</h3>
+      <p>The display will show several controls:</p>
+      <ul>
+        <li><strong>'on'</strong> - enables/disables MIDI output</li>
+        <li><strong>'hold'</strong> - enables hold mode - notes will be held even when fingerings are released, either until the mode is toggled off, or until another note is played, which will then be held. Right key arrow can toggle hold mode on, and left key arrow can turn it off.</li>
+        <li><strong>'bass'</strong> - enables bass row mode - notes on the bottom row of the keyboard will be transposed an octave down when active, can be toggled on with down arrow key, and off with up arrow key.</li>
+        <li><strong>'KEY'</strong> - You can adjust the key you play in from the dropdown menu. Default is concert C</li>
+        <li><strong>'LATENCY'</strong> - Adjusts the amount of latency before a note is registered. This buffer period is necessary to accurately assess your key presses and determine what note is being played. Higher latency allows for less precise playing, but gives less immediate feedback. Lower latency will give you more immediate feedback, but requires more precision from the user. 30ms is the default and should be sufficient to let a saxophonist transition seamlessly into playing the bt1. 20ms is what I try to play at. I'd recommend 50ms for non-sax players to start with.</li>
+        <li><strong>'VELOCITY'</strong>- manually adjust the velocity</li>
+        <li><strong>'EXPRESSION'</strong>- you can pair the bt1 with an expression pedal, or use the slider to manually adjust expression.</li>
+        <li><strong>'Gear Wheel'</strong>- in the bottom right corner, used to adjust MIDI input/output settings. Remember that the output is the most important, and should be set to IAC Driver. If you're feeling bold, you can select another MIDI device and output to an external instrument. Input is only important if you plan on connecting an expression pedal.</li>
+      </ul>
+    </div>
+
+    <div id="special-keys" class="support-content">
+      <h2>Special Keys</h2>
+      <ul>
+        <li><strong>1, 2, 3</strong> - global octave toggle - the system defaults to '2' as the octave setting</li>
+        <li><strong>8</strong> - transpose to Eb Alto Sax</li>
+        <li><strong>9</strong> - transpose to Bb Tenor Sax</li>
+        <li><strong>0</strong> - transpose to C Concert (default)</li>
+        <li><strong>"Up" arrow</strong> - toggle bass row off (default)</li>
+        <li><strong>"Down" arrow</strong> - toggle bass row on</li>
+        <li><strong>"Left" arrow</strong>- toggle note hold mode off (default)</li>
+        <li><strong>"Right" arrow</strong>- toggle note hold mode on</li>
+        <li><strong>v, g, y</strong> - temporary octave down keys - temporarily transposes note down an octave while it's being held</li>
+        <li><strong>b, h, u</strong> - temporary octave up keys - temporarily transposes note up an octave while it's being held</li>
+        <li><strong>q</strong> - temporary note hold button - once pressed, it sustains the note currently being played, and user can release their note fingering. It will disable either by pressing q again, or by playing another note.</li>
+      </ul>
+    </div>
+
+    <div id="hand-setup" class="support-content">
+      <h2>Hand Setup</h2>
+      <p>Players should set up with their fingers resting on the middle, or second row of letters of the keyboard, with the left index finger on "f" and the right index finger on "j". There are three rows of letters on the keyboard that all represent different octaves:</p>
+      
+      <ul>
+        <li>The middle row you'll start is the second row.</li>
+        <li>To move your fingers up an octave, you will shift up and to the right, so that your left index finger lands on "t", and your right index finger lands on "i". This is the third row.</li>
+        <li>To move your fingers down an octave, you will shift down and to the left, so that your left index finger lands on "c", and your right index finger lands on "n". This is the first row.</li>
+        <li>Each row has a temporary octave up and down key.</li>
+      </ul>
+      
+      <p>There are no palm key fingerings on the bt1, and the only two pinky keys are for G# and D#. You will use the other fingerings for low Bb, B, C, and C# in the octave of your choosing.</p>
+    </div>
+
+    <div id="legato" class="support-content">
+      <h2>Legato Playing</h2>
+      <p>Like the saxophone, you can add or subtract fingers to an existing fingering to trigger a new note. You can play G to A by peeling up your left hand ring finger, and then put it back down to play A to G. For our purposes, we'll call this legato playing. The bt1 has some special ways of employing legato playing, and I'll demonstrate with some examples. Let's start from the bottom:</p>
+      
+      <p>You play a G major scale, but starting from second-row D. You can play D E and F# without the optional left-hand fingerings, but you may add them at any point in preparation for the remainder of the scale. When you do add them, they won't trigger until you lift up your right-hand fingerings.</p>
+      
+      <p>You've played up to C in your G major scale and you're ready to transition to third-row D. You can leave your second-row C fingering down while you transition to the third-row D fingering. Third-row D will be triggered as soon as it's pressed, and it will override the second-row C fingering that you're still holding. This makes it so that you don't have to worry about coordinating the release of an old note with the key-presses of a new note. You can play D, E, and F# in the third row and still have your second-row C fingering down. You can maintain hold or release the second-row C fingering whenever you want without interfering with the legato playing of D up to E and F#.</p>
+      
+      <p>This works the opposite way as well.</p>
+      
+      <p>You're coming down the scale from third-row D down to second-row C. You can press your fingering for second-row C while your right hand is still holding third-row D. Second-row C will sound and override your third-row D fingering. You can then keep your third-row D fingering pressed and it won't interfere with legato playing between C, B, A, and G. You're free to release that D fingering whenever you want without it interfering with your left hand notes.</p>
+      
+      <p>This system optimizes scalar-style playing for notes that are next to each other, but it also allows for large-interval transitions.</p>
+    </div>
+
+    <div id="pivoting" class="support-content">
+      <h2>Pivoting</h2>
+      <p>You can use held notes to serve as a pivot point that allows you to go up and down to other notes while smoothly transitioning back to your pivot point. Note that this only works for manually held notes, not notes triggered in hold mode.</p>
+      
+      <p>Let's go over some examples:</p>
+      
+      <p>You play first-row G and hold it down so that it becomes a pivot point. You then add second-row D. When you're ready, you can then let go of your second row D fingering and the note will snap back to G, because you're still holding it down on the first row. You could then hold G on the first row, and play a D on the third row, and now you're getting some nice leaps. You hold G down and it becomes a pivot point for you to then play any right-hand note you want.</p>
+      
+      <p>Let's take this further!</p>
+      <p>You can actually use ANY left-hand fingering as a pivot point: G, G#, A, B, and C can all be held and used as a pivot point as you play whatever right-hand notes you want. This even works for same-row notes.</p>
+      
+      <p>You play and hold second-row B to use as a pivot point, then play second-row D. Second-row D will play normally, and as soon as you release it, it will pivot straight back to second-row B. Now we're starting to venture a bit out of saxophone territory.</p>
+      
+      <p>The only exception to this is A#, since its fingering uses both hands. You cannot pivot from A to F on the same row, it will only trigger A#.</p>
+      
+      <p>Let's take this JUST ONE STEP further!!</p>
+      <p>You can pivot from right to left, too! Use any right hand note as a pivot point to pivot to any left hand notes in a different row. You cannot pivot from right to left to left hand notes that are on the same row as your right hand note. This stays true to the saxophone logic, as it would interfere with the optional fingerings.</p>
+      
+      <p>You play and hold a third-row F to use as a pivot point. You can then play any left-hand note in the second or first row. Once you release that note, you will pivot back to third-row F. Now we're really outside saxophone territory!</p>
+      
+      <p>The pivot function makes it soooo easy to play arpeggiated lines that are otherwise difficult to play on the saxophone.</p>
+    </div>
+
+    <div id="keyboard-limitations" class="support-content">
+      <h2>Keyboard Limitations</h2>
+      <p>Combining multiple key presses together in this way is not something that is typically required of computer keyboards. Because of this, certain combinations of key presses will not work on certain keyboards. This is called key ghosting. On Macbook pro keyboards, I have found that the intuitive key combo of "iop[" doesn't work, so instead you will likely have to use the fingering, "iop]"</p>
+      
+      <p>To use the original fingering, you'll need a special keyboard that has anti-ghosting capabilities, meaning, certain key combinations aren't blocked from being registered.</p>
+      
+      <p>There is also a 6 key limit on most keyboards, so if you play more than 6 keys at a time, you'll have issues. This is also solved by the special keyboard, these keyboards are generally marketed as "No Key Rollover Keyboards (NKRO)" and NKRO keyboards are usually anti-ghosting as well.</p>
+      
+      <p>Additionally, the left shift button will not work to play the most intuitive fingering for low G# "shiftzxc", you will have to use the fingering "zxc." (that period is part of the key combo) UNLESS- You download Karabiner-Elements, a software that remaps the keys of your keyboard to another key. You can get Karabiner-Elements and remap the left shift key to be the number "4", and it will start to work. Shift doesn't work in combination with the other keys because it is a modifier key. This workaround takes a bit of effort, but it's totally worth it.</p>
+      
+      <p>I wouldn't really expect beta testers to get a new keyboard to test this product, but I will say, my $60 keyboard has made it so much easier to play the bt1. It's amazing. Let me know if you need keyboard recs, I now know WAY more about them than I ever thought I would. Having the proper first row G# and 3rd row D# sharp fingerings makes all three rows perfectly even, and it's awesome.</p>
+    </div>
+
+    <div id="key-mappings" class="support-content">
+      <h2>Fingerings</h2>
+      <p>The note names and octave numbers reflect the notes of the default settings upon launch, before transposition.</p>
+      
+      <div class="fingering-tables">
+        <div class="fingering-row">
+          <h3>First Row</h3>
+          <div class="note-boxes">
+            <div class="note-box">
+              <div class="note-name">D2</div>
+              <div class="note-fingering">n m ,</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">D#2</div>
+              <div class="note-fingering">n m , .</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">E2</div>
+              <div class="note-fingering">n m</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F2</div>
+              <div class="note-fingering">n</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F#2</div>
+              <div class="note-fingering">m</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G2</div>
+              <div class="note-fingering">z x c</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G#2</div>
+              <div class="note-fingering">z x c .</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A2</div>
+              <div class="note-fingering">x c</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A#2</div>
+              <div class="note-fingering">x c n</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">B2</div>
+              <div class="note-fingering">c</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">C3</div>
+              <div class="note-fingering">x</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">C#3</div>
+              <div class="note-fingering">space</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fingering-row">
+          <h3>Second Row</h3>
+          <div class="note-boxes">
+            <div class="note-box">
+              <div class="note-name">D3</div>
+              <div class="note-fingering">j k l</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">D#3</div>
+              <div class="note-fingering">j k l ;</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">E3</div>
+              <div class="note-fingering">j k</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F3</div>
+              <div class="note-fingering">j</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F#3</div>
+              <div class="note-fingering">k</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G3</div>
+              <div class="note-fingering">s d f</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G#3</div>
+              <div class="note-fingering">a d f s</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A3</div>
+              <div class="note-fingering">d f</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A#3</div>
+              <div class="note-fingering">d f j</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">B3</div>
+              <div class="note-fingering">f</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">C4</div>
+              <div class="note-fingering">d</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">C#4</div>
+              <div class="note-fingering">i o p space</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fingering-row">
+          <h3>Third Row</h3>
+          <div class="note-boxes">
+            <div class="note-box">
+              <div class="note-name">D4</div>
+              <div class="note-fingering">i o p</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">D#4</div>
+              <div class="note-fingering">i o p ]</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">E4</div>
+              <div class="note-fingering">i o</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F4</div>
+              <div class="note-fingering">i</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">F#4</div>
+              <div class="note-fingering">o</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G4</div>
+              <div class="note-fingering">e r t</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">G#4</div>
+              <div class="note-fingering">e r t w</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A4</div>
+              <div class="note-fingering">r t</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">A#4</div>
+              <div class="note-fingering">r t i</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">B4</div>
+              <div class="note-fingering">t</div>
+            </div>
+            <div class="note-box">
+              <div class="note-name">C5</div>
+              <div class="note-fingering">r</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="alternative-fingerings">
+        <p><strong>Alternative G#2</strong> (if you've used Karabiner-Elements): <span class="note-fingering">shift z x c</span></p>
+        <p><strong>Alternative D#4</strong> (if you've got a nicer, NKRO keyboard): <span class="note-fingering">i o p [</span></p>
+      </div>
+    </div>
+
+    <section class="contact-support">
+      <h2>Questions?</h2>
+      <p>Need help with your breathtaker1? Have a suggestion for the next version?</p>
+      <a href="mailto:contact@breathtaker.com" class="support-button">Contact Us</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <div class="footer-logo">breathtaker1</div>
+        <p>Transform your keyboard into an expressive wind controller.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3>Product</h3>
+        <ul>
+          <li><a href="buy.html">breathtaker1</a></li>
+          <li><a href="buy.html">Free Trial</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© 2025 breathtaker. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
