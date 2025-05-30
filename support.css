@@ -12,7 +12,6 @@
   margin-bottom: 60px;
   color: #ffffff;
   position: relative;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .support-page h1::after {
@@ -45,7 +44,6 @@
   text-transform: lowercase;
   position: relative;
   padding-bottom: 10px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .support-section h2::after {
@@ -89,7 +87,6 @@
 
 .support-links a:hover {
   color: #ffffff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 .support-links a:hover::after {
@@ -106,13 +103,6 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.support-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .support-content h2 {
@@ -121,7 +111,7 @@
   margin-bottom: 25px;
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 .support-content h3 {
@@ -129,7 +119,7 @@
   color: #ffffff;
   margin: 30px 0 15px;
   font-weight: 500;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
 .support-content p {
@@ -153,7 +143,7 @@
 .support-content strong {
   color: #ffffff;
   font-weight: 600;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  
 }
 
 /* Fingering tables */
@@ -168,13 +158,6 @@
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.fingering-row:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .fingering-row h3 {
@@ -184,7 +167,7 @@
   font-weight: 500;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
 .note-boxes {
@@ -205,14 +188,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.note-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  background-color: rgba(90, 112, 136, 0.75);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .note-name {
@@ -220,7 +195,7 @@
   color: #ffffff;
   margin-bottom: 10px;
   font-size: 16px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
 .note-fingering {
@@ -276,20 +251,13 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.contact-support:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .contact-support h2 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 .contact-support p {
@@ -317,10 +285,7 @@
 
 .support-button:hover {
   background-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  color: #5a7088;
-  opacity: 0.9;
+  color: #6F91AC;
 }
 
 
