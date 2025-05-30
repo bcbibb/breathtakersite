@@ -151,33 +151,19 @@ function initializeNewsletterForm() {
     
     newsletterForms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             const emailInput = this.querySelector('input[type="email"]');
             const email = emailInput.value.trim();
             
             if (!isValidEmail(email)) {
+                e.preventDefault();
                 showFormError(emailInput, 'Please enter a valid email address');
                 return;
             }
             
-            // Here you would normally send the form data to a server
-            // For now, we'll just show a success message
-            
             // Clear any previous error messages
             clearFormErrors(this);
             
-            // Replace the form with a success message
-            const container = this.parentElement;
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.textContent = 'Thank you for subscribing! We\'ll keep you updated on breathtaker1 news.';
-            
-            // Hide the form
-            this.style.display = 'none';
-            
-            // Add the success message
-            container.appendChild(successMessage);
+            // Form will submit naturally to Mailchimp
         });
     });
 }
@@ -269,3 +255,4 @@ function clearFormErrors(form) {
         input.style.borderColor = '';
     });
 }
+

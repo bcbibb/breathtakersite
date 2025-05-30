@@ -323,15 +323,6 @@
   opacity: 0.9;
 }
 
-/* Add styles for active nav link */
-header nav a.active {
-  color: #000000;
-  font-weight: 500;
-}
-
-header nav a.active::after {
-  width: 100%;
-}
 
 /* Cache busting version tag */
 .support-css-version {
