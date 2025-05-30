@@ -10,15 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSupportForm();
     initializeImageZoom();
     addFormatBadges();
-    
+    initializeScrollShadow();
+
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            
+
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -29,6 +30,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/**
+ * Add shadow to header on scroll
+ */
+function initializeScrollShadow() {
+    const header = document.querySelector('header');
+
+    // Initial check in case page is loaded scrolled down
+    if (window.scrollY > 20) {
+        header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.boxShadow = 'none';
+    }
+
+    // Add scroll listener
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+            header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
+    });
+}
 
 /**
  * Initialize lightbox for product screenshots
