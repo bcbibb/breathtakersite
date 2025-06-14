@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=3.1" />
   <link rel="stylesheet" href="support.css?v=1.4" />
+  <link rel="icon" type="image/png" href="bt1final.png" />
   <script src="script.js?v=1.1" defer></script>
 </head>
 <body>
@@ -29,9 +30,11 @@
     
     <div class="support-grid">
       <section class="support-section">
-        <h2>installation</h2>
+        <h2>installation & setup</h2>
         <ul class="support-links">
           <li><a href="#installation">Installation Instructions</a></li>
+          <li><a href="#logic-pro">Logic Pro Setup (AU)</a></li>
+          <li><a href="#ableton-live">Ableton Live Setup (VST3)</a></li>
         </ul>
       </section>
 
@@ -64,7 +67,21 @@
     <div id="installation" class="support-content">
       <h2>Installation Instructions</h2>
       
-      <h3>Enable IAC Driver in Audio MIDI Setup</h3>
+      <p>breathtaker1 comes in three formats: AU plugin, VST3 plugin, and standalone app. Choose the method that works best for your setup.</p>
+
+      <h3>Plugin Installation (AU & VST3)</h3>
+      <p>For AU and VST3 versions, installation is simple:</p>
+      <ol>
+        <li>Download and run the breathtaker1 installer</li>
+        <li>The plugins will be automatically installed to your system's plugin directories</li>
+        <li>Launch your DAW and the plugins will appear in your plugin list</li>
+        <li>No additional configuration needed - just load the plugin onto a MIDI track</li>
+      </ol>
+
+      <h3>Standalone App Setup</h3>
+      <p>The standalone app requires additional MIDI configuration:</p>
+      
+      <h4 style="color: white;">Enable IAC Driver in Audio MIDI Setup</h4>
       <ol>
         <li>In spotlight, search Audio MIDI Setup</li>
         <li>Once it's open, in the top bar of your computer, select Window>Show MIDI Studio</li>
@@ -73,23 +90,72 @@
         <li>If you have any other virtual midi devices other than the IAC driver, it's possible you may have to disable it. The bt1 may try to use that as an input instead. Not sure yet. It will, however, prioritize the IAC driver over other non-virtual midi devices, so you'll probably be good.</li>
       </ol>
 
-      <h3>Launch and configure your DAW of choice</h3>
+      <h4 style="color: white;">Launch and configure your DAW of choice</h4>
       <ol>
         <li>At this point, breathtaker1 will be automatically ready to send MIDI through the IAC driver.</li>
         <li>In Ableton, a MIDI track will automatically accept the IAC driver through default "All channels" input setting, but you can be more specific if you'd like and select "IAC Driver".</li>
         <li>Make sure a MIDI instrument track with a loaded instrument has been added, and hit the red record-enable button.</li>
       </ol>
 
-      <h3>Launch breathtaker1</h3>
+      <h4 style="color: white;">Launch breathtaker1 Standalone</h4>
       <p>Launch the program, and boom! As soon as you hit some key combos, you should hear sound triggered from your synth.</p>
 
       <h3>Keyboard focus</h3>
       <p>bt1 can only hijack your keyboard (otherwise known as getting your keyboard focus) if it is in the foreground of your computer. If you click out of it into your DAW, you'll have to click back into the bt1 to get it to work again.</p>
     </div>
 
+    <div id="logic-pro" class="support-content">
+      <h2>Logic Pro Setup (AU)</h2>
+      
+      <p>breathtaker1 appears as an AU MIDI effect plugin in Logic Pro.</p>
+
+      <h3>Setup Instructions</h3>
+      <ol>
+        <li>Create a new <strong>Software Instrument track</strong></li>
+        <li>On the channel strip, click the <strong>MIDI Effects slot</strong></li>
+        <li>Navigate to <strong>Audio Units > Breathtaker > breathtaker1</strong></li>
+        <li>A green label with "breathtaker1" will appear in the channel strip</li>
+        <li>Add your desired software instrument to the Instrument slot</li>
+      </ol>
+
+      <h3>Signal Flow</h3>
+      <p>MIDI Input → breathtaker1 (MIDI FX) → Software Instrument → Audio Effects → Output</p>
+    </div>
+
+    <div id="ableton-live" class="support-content">
+      <h2>Ableton Live Setup (VST3)</h2>
+      
+
+      <h3>Setup Instructions</h3>
+      <ol>
+        <li>Create a new <strong>MIDI track</strong></li>
+        <li>Search for <strong>breathtaker1</strong> in the browser and add it</li>
+        <li>Create a second <strong>MIDI track</strong> with your desired software instrument</li>
+        <li>On the instrument track, set the <strong>MIDI From</strong> input to the track containing breathtaker1</li>
+        <li>Set the instrument track's monitor to <strong>"In"</strong></li>
+        <li><strong>Record-enable both tracks</strong> for proper functionality</li>
+      </ol>
+
+      <h3>Signal Flow</h3>
+      <p>MIDI Track 1: Keyboard Input → breathtaker1 → MIDI Output<br>
+      MIDI Track 2: MIDI Input (from Track 1) → Software Instrument → Audio Output</p>
+
+      <h3>Track Configuration</h3>
+      <ul>
+        <li><strong>Track 1 (breathtaker1):</strong> MIDI track with breathtaker1 plugin, record-enabled</li>
+        <li><strong>Track 2 (Instrument):</strong> MIDI track with synth, MIDI From set to Track 1, Monitor "In", record-enabled</li>
+      </ul>
+
+      <h3>Important Notes</h3>
+      <ul>
+        <li>Both tracks must be record-enabled for the MIDI routing to work properly</li>
+        <li>The instrument track's monitor must be set to "In" to hear the output</li>
+        <li>MIDI effects in Ableton can only be placed in MIDI tracks, before any instruments</li>
+      </ul>
+    </div>
 
     <div id="playing" class="support-content">
-      <h2>Playing The breathtaker1</h2>
+      <h2>Playing breathtaker1</h2>
       
       <h3>Display</h3>
       <p>The display will show several controls:</p>
@@ -101,7 +167,7 @@
         <li><strong>'LATENCY'</strong> - Adjusts the amount of latency before a note is registered. This buffer period is necessary to accurately assess your key presses and determine what note is being played. Higher latency allows for less precise playing, but gives less immediate feedback. Lower latency will give you more immediate feedback, but requires more precision from the user. 30ms is the default and should be sufficient to let a saxophonist transition seamlessly into playing the bt1. 20ms is what I try to play at. I'd recommend 50ms for non-sax players to start with.</li>
         <li><strong>'VELOCITY'</strong>- manually adjust the velocity</li>
         <li><strong>'EXPRESSION'</strong>- you can pair the bt1 with an expression pedal, or use the slider to manually adjust expression.</li>
-        <li><strong>'Gear Wheel'</strong>- in the bottom right corner, used to adjust MIDI input/output settings. Remember that the output is the most important, and should be set to IAC Driver. If you're feeling bold, you can select another MIDI device and output to an external instrument. Input is only important if you plan on connecting an expression pedal.</li>
+        <li><strong>'I/O'</strong>- in the bottom right corner (standalone app only), used to adjust MIDI input/output settings. Remember that the output is the most important, and should be set to IAC Driver. If you're feeling bold, you can select another MIDI device and output to an external instrument. Input is only important if you plan on connecting an expression pedal.</li>
       </ul>
     </div>
 
@@ -176,15 +242,15 @@
 
     <div id="keyboard-limitations" class="support-content">
       <h2>Keyboard Limitations</h2>
-      <p>Combining multiple key presses together in this way is not something that is typically required of computer keyboards. Because of this, certain combinations of key presses will not work on certain keyboards. This is called key ghosting. On Macbook pro keyboards, I have found that the intuitive key combo of "iop[" doesn't work, so instead you will likely have to use the fingering, "iop]"</p>
+      <p>Most computer keyboards weren't designed for registering multiple simultaneous key presses since they're not needed for typing. Because of this, certain combinations of key presses will not work on certain keyboards. This is called key ghosting. On Macbook pro keyboards, I have found that the intuitive key combo of "iop[" doesn't work, so instead you will likely have to use the fingering, "iop]"</p>
       
       <p>To use the original fingering, you'll need a special keyboard that has anti-ghosting capabilities, meaning, certain key combinations aren't blocked from being registered.</p>
       
-      <p>There is also a 6 key limit on most keyboards, so if you play more than 6 keys at a time, you'll have issues. This is also solved by the special keyboard, these keyboards are generally marketed as "No Key Rollover Keyboards (NKRO)" and NKRO keyboards are usually anti-ghosting as well.</p>
+      <p>There is also a 6 key limit on most keyboards, so if you play more than 6 keys at a time, you'll have issues. However, in practice, you'll rarely need all 7 keys at once if you don't use the optional left hand fingerings. This is also solved by the special keyboard, these keyboards are generally marketed as "No Key Rollover Keyboards (NKRO)" and NKRO keyboards are usually anti-ghosting as well.</p>
       
-      <p>Additionally, the left shift button will not work to play the most intuitive fingering for low G# "shiftzxc", you will have to use the fingering "zxc." (that period is part of the key combo) UNLESS- You download Karabiner-Elements, a software that remaps the keys of your keyboard to another key. You can get Karabiner-Elements and remap the left shift key to be the number "4", and it will start to work. Shift doesn't work in combination with the other keys because it is a modifier key. This workaround takes a bit of effort, but it's totally worth it.</p>
+      <p>Additionally, the left shift button will not work to play the most intuitive fingering for low G# "shiftzxc", you will have to use the fingering "zxc." (that period is part of the key combo) UNLESS- You download <a href="https://karabiner-elements.pqrs.org" target="_blank">Karabiner-Elements</a>, a software that remaps the keys of your keyboard to another key. You can get Karabiner-Elements and remap the left shift key to be the number "4", and it will start to work. Shift doesn't work in combination with the other keys because it is a modifier key. This is super easy to set up and once installed, everything works exactly as intended.</p>
       
-      <p>I wouldn't really expect beta testers to get a new keyboard to test this product, but I will say, my $60 keyboard has made it so much easier to play the bt1. It's amazing. Let me know if you need keyboard recs, I now know WAY more about them than I ever thought I would. Having the proper first row G# and 3rd row D# sharp fingerings makes all three rows perfectly even, and it's awesome.</p>
+      <p>Here is a link to download Karabiner-Elements: <a href="https://karabiner-elements.pqrs.org" target="_blank">https://karabiner-elements.pqrs.org</a></p>
     </div>
 
     <div id="key-mappings" class="support-content">
