@@ -35,6 +35,7 @@
           <li><a href="#installation">Installation Instructions</a></li>
           <li><a href="#logic-pro">Logic Pro Setup (AU)</a></li>
           <li><a href="#ableton-live">Ableton Live Setup (VST3)</a></li>
+          <li><a href="#garageband">GarageBand Setup</a></li>
         </ul>
       </section>
 
@@ -77,6 +78,7 @@
         <li>Launch your DAW and the plugins will appear in your plugin list</li>
         <li>No additional configuration needed - just load the plugin onto a MIDI track</li>
       </ol>
+      <p><strong>Note:</strong> The AU plugin works in Logic Pro and most DAWs that support AU MIDI effects. GarageBand users must use the standalone app version.</p>
 
       <h3>Standalone App Setup</h3>
       <p>The standalone app requires additional MIDI configuration:</p>
@@ -151,6 +153,32 @@
         <li>Both tracks must be record-enabled for the MIDI routing to work properly</li>
         <li>The instrument track's monitor must be set to "In" to hear the output</li>
         <li>MIDI effects in Ableton can only be placed in MIDI tracks, before any instruments</li>
+      </ul>
+    </div>
+
+    <div id="garageband" class="support-content">
+      <h2>GarageBand Setup</h2>
+      
+      <p>GarageBand users need to use the <strong>standalone app version</strong> of breathtaker1.</p>
+
+      <h3>Why Standalone Only?</h3>
+      <p>GarageBand doesn't support third-party AU MIDI effect plugins like breathtaker1. It only accepts audio effect plugins and instruments.</p>
+
+      <h3>Setup Instructions</h3>
+      <ol>
+        <li>Follow the <a href="#installation">Standalone App Setup</a> instructions to configure the IAC Driver</li>
+        <li>Launch breathtaker1 standalone app</li>
+        <li>In GarageBand, create a new <strong>Software Instrument track</strong></li>
+        <li>Click the track's info button (i) and set the input to <strong>IAC Driver</strong></li>
+        <li>Record-enable the track</li>
+        <li>Keep breathtaker1 app in the foreground to maintain keyboard focus</li>
+      </ol>
+
+      <h3>Important Notes</h3>
+      <ul>
+        <li>The breathtaker1 app must remain in the foreground to capture keyboard input</li>
+        <li>You'll need to switch between the breathtaker1 app and GarageBand as needed</li>
+        <li>Consider using Spaces or Mission Control to quickly switch between apps</li>
       </ul>
     </div>
 
